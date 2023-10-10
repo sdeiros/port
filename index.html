@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Noturno</title>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        p{
+          font-family: Arapey;
+          font-size: 96px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        
+        .ola{
+          font-family: Arapey;
+          font-size: 96px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        
+        .dark-mode {
+            background-color: #0C0C0C; /* Cor do modo noturno */
+            color: #FDFFFF;
+        }
+        .light-mode {
+            background-color: #FFFDF5; /* Cor do modo claro */
+            color: #000; /* Cor do texto no modo claro */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ola">OLÁ</h1>
+    <p>EU SOU O DAVI</p>
+
+    <button id="toggle-mode">Alternar Modo</button>
+
+    <script>
+        const body = document.body;
+        const toggleButton = document.getElementById('toggle-mode');
+        let isDarkMode = false;
+
+        toggleButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                body.classList.add('dark-mode');
+                body.classList.remove('light-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+            }
+        });
+    </script>
+</body>
+</html>

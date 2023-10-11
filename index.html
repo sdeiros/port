@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <title>DM - portifólio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
         body {
             transition: background-color 0.5s, color 0.5s;
             font-family: Arial;
@@ -15,54 +16,106 @@
             padding: 40px;
         }
 
-        p{
+        p {
             position: absolute;
             font-family: Arapey;
             font-size: 96px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            top:10%;
-        }
-        
-        .ola{
-            position: absolute;
-            font-family: Arapey;
-            font-size: 96px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            top: 3rem;
         }
 
-        .seta{
+        .ola {
+            position: absolute;
+            font-family: Arapey;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          top: 0rem;
+        }
+
+        .seta {
             position: absolute;
             width: 85.5px;
             height: 84px;
             flex-shrink: 0;
             left: 0;
+          top: 4rem;
         }
-        
+
         .dark-mode {
             background-color: #0C0C0C; /* Cor do modo noturno */
             color: #FDFFFF;
         }
+
         .light-mode {
             background-color: #FFFDF5; /* Cor do modo claro */
             color: #000; /* Cor do texto no modo claro */
         }
+
+        .txt2 {
+            position: absolute;
+            top: 14rem;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            left: 24%;
+        }
+
+        .txt3 {
+            position: absolute;
+            top: 17rem;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            left: 24%;
+        }
+
+        .svg-container {
+            position: absolute;
+            width: 85.5px;
+            height: 84px;
+            flex-shrink: 0;
+         top: 16rem;
+            left: 19%;
+        }
+
+        
     </style>
 </head>
 <body>
     <h1 class="ola">OLÁ</h1><br>
     <p>EU SOU O DAVI</p>
-    
-   <div class="svg-container">
+
+    <button id="toggle-mode">Alternar Modo</button>
+
+    <div class="svg-container">
         <svg xmlns="http://www.w3.org/2000/svg" width="88" height="86" viewBox="0 0 88 86" fill="none">
-            <path id="svg-path" d="M85.5 1H70.5C69.9477 1 69.5 1.44771 69.5 2V53.5858C69.5 54.4767 68.4229 54.9229 67.7929 54.2929L15.2071 1.70711C14.8166 1.31658 14.1834 1.31658 13.7929 1.70711L3.70711 11.7929C3.31658 12.1834 3.31658 12.8166 3.70711 13.2071L55.7929 65.2929C56.4229 65.9229 55.9767 67 55.0858 67H2C1.44772 67 1 67.4477 1 68V84C1 84.5523 1.44772 85 2 85H85.5C86.0523 85 86.5 84.5523 86.5 84V2C86.5 1.44772 86.0523 1 85.5 1Z" stroke="black" stroke-width="2"/>
+            <path id="svg-path" d="M85.5 1H70.5C69.9477 1 69.5 1.44771 69.5 2V53.5858C69.5 54.4767 68.4229 54.9229 67.7929 54.2929L15.2071 1.70711C14.8166 1.31658 14.1834 1.31658 13.7929 1.70711L3.70711 11.7929C3.31658 12.1834 3.31658 12.8166 3.70711 13.2071L55.7929 65.2929C56.4229 65.9229 55.9767 67 55.0858 67H2C1.44772 67 1 67.4477 1 68V84C1 84.5523 1.44772 85 2 85H85.5C86.0523 85 86.5 84.5523 86.5 84V2C86.5 1.44772 86.0523 1 85.5 1Z" stroke="black" stroke-width="3" />
         </svg>
     </div>
 
-    <button id="toggle-mode">Alternar Modo</button>
+    <h1 class="txt2">desenvolvedor</h1>
+    <h1 class="txt3" lang="en">front-end/web</h1>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="350" height="345" viewBox="0 0 350 345" fill="none" style="position: absolute; left: 7rem; top: 26rem;">>
+  <path d="M348.5 197.748C348.5 45.5 235.768 1.24766 178.268 1.24766C130.268 -2.25232 -10.6217 29.7815 1.76822 197.748C16.7621 401.016 348.5 384.144 348.5 197.748Z" stroke="url(#paint0_linear_128_50)" stroke-width="2"/>
+  <defs>
+    <linearGradient id="paint0_linear_128_50" x1="76" y1="36" x2="262" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="0.4375" stop-color="#56C2FF"/>
+      <stop offset="0.890625" stop-color="#0C0C0C" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
+    
 
     <script>
         const body = document.body;

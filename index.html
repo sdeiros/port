@@ -60,25 +60,20 @@
     <h1 class="ola">OLÁ</h1><br>
     <p>EU SOU O DAVI</p>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="86" viewBox="0 0 88 86" fill="none">
-        <path d="M85.5 1H70.5C69.9477 1 69.5 1.44771 69.5 2V53.5858C69.5 54.4767 68.4229 54.9229 67.7929 54.2929L15.2071 1.70711C14.8166 1.31658 14.1834 1.31658 13.7929 1.70711L3.70711 11.7929C3.31658 12.1834 3.31658 12.8166 3.70711 13.2071L55.7929 65.2929C56.4229 65.9229 55.9767 67 55.0858 67H2C1.44772 67 1 67.4477 1 68V84C1 84.5523 1.44772 85 2 85H85.5C86.0523 85 86.5 84.5523 86.5 84V2C86.5 1.44772 86.0523 1 85.5 1Z" stroke="white" stroke-width="2"/>
-      </svg>
-
-    <button id="toggle-mode">Alternar Modo</button>
-
     <script>
         const body = document.body;
         const toggleButton = document.getElementById('toggle-mode');
+        const svgPath = document.getElementById('svg-path');
         let isDarkMode = false;
 
         toggleButton.addEventListener('click', () => {
             isDarkMode = !isDarkMode;
             if (isDarkMode) {
                 body.classList.add('dark-mode');
-                body.classList.remove('light-mode');
+                svgPath.setAttribute('stroke', 'white'); // Cor do traço para o modo escuro
             } else {
                 body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
+                svgPath.setAttribute('stroke', 'black'); // Cor do traço para o modo claro
             }
         });
     </script>

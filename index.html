@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./responsivo.css">
     <!-- ICONS CDN FONTAWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <title>DM - portifólio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
@@ -116,19 +116,19 @@
         #theme-toggle {
             position: absolute;
             left: 90%;
+            cursor: pointer; /* Adicione este estilo para o cursor mudar ao passar o mouse */
         }
-
     </style>
 </head>
 <body>
     <nav>
         <div class="btn">
-    <div class="btn__indicator">
-      <div class="btn__icon-container">
-        <i class="btn__icon fa-solid"></i>
-      </div>
-    </div>
-  </div>
+            <div class="btn__indicator">
+                <div class="btn__icon-container" id="theme-toggle">
+                    <i class="btn__icon fas fa-sun"></i>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <h1 class="ola">OLÁ</h1><br>
@@ -145,7 +145,7 @@
     <h1 class="txt2">desenvolvedor</h1>
     <h1 class="txt3" lang="en">front-end/web</h1>
 
-<svg class="circle" xmlns="http://www.w3.org/2000/svg" width="350" height="345" viewBox="0 0 350 345" fill="none">
+    <svg class="circle" xmlns="http://www.w3.org/2000/svg" width="350" height="345" viewBox="0 0 350 345" fill="none">
         <path
             d="M348.5 197.748C348.5 45.5 235.768 1.24766 178.268 1.24766C130.268 -2.25232 -10.6217 29.7815 1.76822 197.748C16.7621 401.016 348.5 384.144 348.5 197.748Z"
             stroke="url(#paint0_linear_128_50)" stroke-width="2" />
@@ -166,58 +166,43 @@
 
     <script>
         const body = document.body;
-const iconContainer = document.querySelector('.btn__icon-container');
-const svgPath = document.getElementById('svg-path');
-let isDarkMode = false;
+        const themeToggle = document.getElementById('theme-toggle');
+        const icon = themeToggle.querySelector('.btn__icon');
+        let isDarkMode = false;
 
-// Função para armazenar o estado do modo escuro no localStorage.
-function storeDarkMode(value) {
-    localStorage.setItem('darkmode', value);
-}
+        // Função para alternar o modo claro/escuro e o ícone
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
 
-// Função para carregar o estado do modo escuro e atualizar o ícone.
-function loadDarkMode() {
-    const darkmode = localStorage.getItem('darkmode');
+            if (isDarkMode) {
+                body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                body.classList.remove('dark-mode');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
 
-    if (!darkmode) {
-        storeDarkMode(false);
-        iconContainer.classList.add('fa-sun');
-    } else if (darkmode == 'true') {
-        body.classList.add('dark-mode');
-        svgPath.setAttribute('stroke', 'white'); // Cor do traço para o modo escuro
-        iconContainer.classList.add('fa-moon');
-    } else if (darkmode == 'false') {
-        iconContainer.classList.add('fa-sun');
-    }
-}
+        // Adiciona um evento de clique para alternar o tema
+        themeToggle.addEventListener('click', toggleTheme);
 
-// Chama a função para carregar o estado do modo escuro e configurar o ícone inicial.
-loadDarkMode();
+        // Carrega o tema do localStorage, se disponível
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('darkmode');
+            if (savedTheme === 'true') {
+                toggleTheme();
+            }
+        }
 
-// Adiciona um evento de clique ao ícone para alternar o modo escuro.
-iconContainer.addEventListener('click', () => {
-    isDarkMode = !isDarkMode;
-    if (isDarkMode) {
-        body.classList.add('dark-mode');
-        svgPath.setAttribute('stroke', 'white'); // Cor do traço para o modo escuro
-    } else {
-        body.classList.remove('dark-mode');
-        svgPath.setAttribute('stroke', 'black'); // Cor do traço para o modo claro
-    }
-    updateIcon();
-    storeDarkMode(isDarkMode);
-});
+        // Armazena o tema atual no localStorage
+        function storeTheme() {
+            localStorage.setItem('darkmode', isDarkMode);
+        }
 
-// Função para atualizar o ícone com base no estado do modo escuro.
-function updateIcon() {
-    if (body.classList.contains('dark-mode')) {
-        iconContainer.classList.remove('fa-sun');
-        iconContainer.classList.add('fa-moon');
-    } else {
-        iconContainer.classList.remove('fa-moon');
-        iconContainer.classList.add('fa-sun');
-    }
-}
+        // Carrega o tema ao iniciar
+        loadTheme();
     </script>
 </body>
 </html>

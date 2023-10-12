@@ -14,8 +14,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
         body {
-            transition: background-color 0.5s, color 0.5s;
+            transition: background-color 1s, color 1s;
             padding: 40px;
+            margin: 0px;
         }
 
         p {
@@ -113,6 +114,10 @@
             top: 66%;
         }
 
+        .btn__icon {
+    font-size: 2em; /* Tamanho em relação ao tamanho do texto */
+}
+
         #theme-toggle {
             position: absolute;
             left: 90%;
@@ -168,6 +173,7 @@
         const body = document.body;
         const themeToggle = document.getElementById('theme-toggle');
         const icon = themeToggle.querySelector('.btn__icon');
+        const svgPath = document.getElementById('svg-path');
         let isDarkMode = false;
 
         // Função para alternar o modo claro/escuro e o ícone
@@ -178,10 +184,12 @@
                 body.classList.add('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
+                svgPath.setAttribute('stroke', 'white'); // Cor do traço para o modo escuro
             } else {
                 body.classList.remove('dark-mode');
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
+                svgPath.setAttribute('stroke', 'black'); // Cor do traço para o modo claro
             }
         }
 
@@ -200,9 +208,6 @@
         function storeTheme() {
             localStorage.setItem('darkmode', isDarkMode);
         }
-
-        // Carrega o tema ao iniciar
-        loadTheme();
     </script>
 </body>
 </html>

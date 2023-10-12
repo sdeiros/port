@@ -1,0 +1,60 @@
+@media (max-width: 1600px) {
+    .ola {
+        font-size: 70px;
+        /* Reduzindo o tamanho da fonte */
+        top: 0rem;
+        /* Ajustando a posição superior */
+    }
+
+    .txt2 {
+        font-size: 36px;
+        /* Reduzindo o tamanho da fonte */
+        top: 11rem;
+        /* Ajustando a posição superior */
+        left: 23%;
+    }
+
+    p{
+        font-size: 70px;
+        top: 3rem;
+    }
+
+    .txt3 {
+        font-size: 36px;
+        /* Reduzindo o tamanho da fonte */
+        top: 13.6rem;
+        /* Ajustando a posição superior */
+        left: 23%;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    .circle {
+        width: 280px; /* Define uma largura máxima para evitar que o SVG fique muito grande */
+        height: auto; /* Mantém a proporção original do SVG */
+        top: 22.8rem;
+    }
+    
+    .svg-container {
+        position: absolute;
+        width: 70px;
+        height: 40px;
+        flex-shrink: 0;
+        top: 13rem;
+        left: 17rem;
+    }
+
+    .sobre{
+        font-size:28px;
+        top:50%;
+        left: 12%;
+    }
+
+    .apre{
+        font-size: 22px;
+        top:57%;
+        width: 600px;
+    }
+}

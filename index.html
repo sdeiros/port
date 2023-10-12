@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" type="text/css" href="./responsivo.css">
     <title>DM - portifólio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
@@ -11,8 +13,6 @@
 
         body {
             transition: background-color 0.5s, color 0.5s;
-            font-family: Arial;
-            text-align: center;
             padding: 40px;
         }
 
@@ -33,26 +33,20 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-          top: 0rem;
-        }
-
-        .seta {
-            position: absolute;
-            width: 85.5px;
-            height: 84px;
-            flex-shrink: 0;
-            left: 0;
-          top: 4rem;
+            top: 0rem;
         }
 
         .dark-mode {
-            background-color: #0C0C0C; /* Cor do modo noturno */
+            background-color: #0C0C0C;
+            /* Cor do modo noturno */
             color: #FDFFFF;
         }
 
         .light-mode {
-            background-color: #FFFDF5; /* Cor do modo claro */
-            color: #000; /* Cor do texto no modo claro */
+            background-color: #FFFDF5;
+            /* Cor do modo claro */
+            color: #000;
+            /* Cor do texto no modo claro */
         }
 
         .txt2 {
@@ -82,22 +76,66 @@
             width: 85.5px;
             height: 84px;
             flex-shrink: 0;
-         top: 16rem;
+            top: 16rem;
             left: 19%;
         }
 
-        
+        .circle {
+            position: absolute;
+            left: 7rem;
+            top: 26rem;
+        }
+
+        .sobre {
+            position: absolute;
+            font-family: Arapey;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            left: 10.7%;
+            top: 58%;
+        }
+
+        .apre {
+            position: absolute;
+            width: 700px;
+            height: 258px;
+            flex-shrink: 0;
+            font-family: Inter;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            left: 18%;
+            top: 66%;
+        }
+
+        #theme-toggle{
+            position: absolute;
+            left: 90%;
+        }
     </style>
+
+
 </head>
+
 <body>
+        <nav>
+            <div id="theme-toggle">
+                <img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/FFFFFF/sun.png" alt="sun-icon"/>
+                <img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/do-not-disturb-2.png" alt="moon-icon"/>
+            </div>
+        </nav>
+
     <h1 class="ola">OLÁ</h1><br>
     <p>EU SOU O DAVI</p>
 
-    <button id="toggle-mode">Alternar Modo</button>
-
     <div class="svg-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="88" height="86" viewBox="0 0 88 86" fill="none">
-            <path id="svg-path" d="M85.5 1H70.5C69.9477 1 69.5 1.44771 69.5 2V53.5858C69.5 54.4767 68.4229 54.9229 67.7929 54.2929L15.2071 1.70711C14.8166 1.31658 14.1834 1.31658 13.7929 1.70711L3.70711 11.7929C3.31658 12.1834 3.31658 12.8166 3.70711 13.2071L55.7929 65.2929C56.4229 65.9229 55.9767 67 55.0858 67H2C1.44772 67 1 67.4477 1 68V84C1 84.5523 1.44772 85 2 85H85.5C86.0523 85 86.5 84.5523 86.5 84V2C86.5 1.44772 86.0523 1 85.5 1Z" stroke="black" stroke-width="3" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 86" fill="none">
+            <path id="svg-path"
+                d="M85.5 1H70.5C69.9477 1 69.5 1.44771 69.5 2V53.5858C69.5 54.4767 68.4229 54.9229 67.7929 54.2929L15.2071 1.70711C14.8166 1.31658 14.1834 1.31658 13.7929 1.70711L3.70711 11.7929C3.31658 12.1834 3.31658 12.8166 3.70711 13.2071L55.7929 65.2929C56.4229 65.9229 55.9767 67 55.0858 67H2C1.44772 67 1 67.4477 1 68V84C1 84.5523 1.44772 85 2 85H85.5C86.0523 85 86.5 84.5523 86.5 84V2C86.5 1.44772 86.0523 1 85.5 1Z"
+                stroke="black" stroke-width="3" />
         </svg>
     </div>
 
@@ -105,25 +143,48 @@
     <h1 class="txt3" lang="en">front-end/web</h1>
 
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="350" height="345" viewBox="0 0 350 345" fill="none" style="position: absolute; left: 7rem; top: 26rem;">>
-  <path d="M348.5 197.748C348.5 45.5 235.768 1.24766 178.268 1.24766C130.268 -2.25232 -10.6217 29.7815 1.76822 197.748C16.7621 401.016 348.5 384.144 348.5 197.748Z" stroke="url(#paint0_linear_128_50)" stroke-width="2"/>
-  <defs>
-    <linearGradient id="paint0_linear_128_50" x1="76" y1="36" x2="262" y2="220" gradientUnits="userSpaceOnUse">
-      <stop stop-color="white"/>
-      <stop offset="0.4375" stop-color="#56C2FF"/>
-      <stop offset="0.890625" stop-color="#0C0C0C" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-</svg>
-    
+    <svg class="circle" xmlns="http://www.w3.org/2000/svg" width="350" height="345" viewBox="0 0 350 345" fill="none">
+        <path
+            d="M348.5 197.748C348.5 45.5 235.768 1.24766 178.268 1.24766C130.268 -2.25232 -10.6217 29.7815 1.76822 197.748C16.7621 401.016 348.5 384.144 348.5 197.748Z"
+            stroke="url(#paint0_linear_128_50)" stroke-width="2" />
+        <defs>
+            <linearGradient id="paint0_linear_128_50" x1="76" y1="36" x2="262" y2="220" gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="0.4375" stop-color="#56C2FF" />
+                <stop offset="0.890625" stop-color="#0C0C0C" stop-opacity="0" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <p class="sobre">sobre mim</p>
+    <p class="apre">Meu nome é Davi Medeiros, tenho 17 anos e sou <strong>desenvolvedor front-end</strong>.<br>
+        Crio websites excepcionais que podem te ajudar a atingir o seu objetivo. 
+        Estou constantemente aprimorando meu conhecimento em novas linguagens e ferramentas. Atualmente desenvolvo com <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> e <strong>Figma</strong> para aprimorar o design. Além disso, tenho experiência em <strong>suporte técnico</strong> e noções de <strong>Desing.</strong>
+    </p>
 
     <script>
         const body = document.body;
-        const toggleButton = document.getElementById('toggle-mode');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const themeToggle = document.getElementById('theme-toggle');
         const svgPath = document.getElementById('svg-path');
         let isDarkMode = false;
 
-        toggleButton.addEventListener('click', () => {
+        // Verifica o tema atual e exibe o ícone apropriado
+        function updateIcon() {
+            if (body.classList.contains('dark-mode')) {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+                svgPath.setAttribute('stroke', 'white'); // Cor do traço para o modo escuro
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+                svgPath.setAttribute('stroke', 'black'); // Cor do traço para o modo claro
+            }
+        }
+
+        // Adiciona o evento de clique para alternar o tema e ícone
+        themeToggle.addEventListener('click', () => {
             isDarkMode = !isDarkMode;
             if (isDarkMode) {
                 body.classList.add('dark-mode');
@@ -132,7 +193,12 @@
                 body.classList.remove('dark-mode');
                 svgPath.setAttribute('stroke', 'black'); // Cor do traço para o modo claro
             }
+            updateIcon();
         });
+
+        // Chama a função para configurar o ícone inicial
+        updateIcon();
     </script>
 </body>
+
 </html>

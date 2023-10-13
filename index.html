@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" type="text/css" href="./responsivo.css">
-    
     <!-- ICONS CDN FONTAWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
@@ -45,12 +44,15 @@
 
         .dark-mode {
             background-color: #0C0C0C;
+            /* Cor do modo noturno */
             color: #FDFFFF;
         }
 
         .light-mode {
             background-color: #FFFDF5;
+            /* Cor do modo claro */
             color: #000;
+            /* Cor do texto no modo claro */
         }
 
         .txt2 {
@@ -117,19 +119,24 @@
 
         .btn__icon {
             font-size: 2em;
+            /* Tamanho em relação ao tamanho do texto */
         }
 
         #theme-toggle {
             position: absolute;
             left: 95%;
             cursor: pointer;
+            /* Adicione este estilo para o cursor mudar ao passar o mouse */
         }
 
         .options {
             position: absolute;
             display: flex;
+            /* Para alinhar os botões horizontalmente */
             left: 71%;
+            /* Alinhar os botões à direita */
             gap: 30px;
+            /* Adicionar espaçamento de 36px entre os botões */
             top: 2.6rem;
             font-family: Arapey;
             font-size: 26px;
@@ -141,9 +148,11 @@
 
         .options a {
             text-decoration: none;
+            /* Remover sublinhado dos links */
             color: inherit;
         }
 
+        /* Estilo padrão da barra de rolagem */
         .dark-mode::-webkit-scrollbar {
             width: 12px;
             background-color: rgb(0, 0, 0);
@@ -161,6 +170,104 @@
         .dark-mode::-webkit-scrollbar-thumb {
             background-color: rgb(255, 255, 255);
         }
+
+        @media (max-width: 1600px) {
+    .ola {
+        font-size: 70px;
+        /* Reduzindo o tamanho da fonte */
+        top: 0rem;
+        /* Ajustando a posição superior */
+    }
+
+    .txt2 {
+        position: absolute;
+        font-size: 36px;
+        /* Reduzindo o tamanho da fonte */
+        top: 11rem;
+        /* Ajustando a posição superior */
+        left: 22rem;
+    }
+
+    p{
+        font-size: 70px;
+        top: 3rem;
+    }
+
+    .txt3 {
+        position: absolute;
+        font-size: 36px;
+        /* Reduzindo o tamanho da fonte */
+        top: 13.6rem;
+        /* Ajustando a posição superior */
+        left: 22rem;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    .circle {
+        width: 280px; /* Define uma largura máxima para evitar que o SVG fique muito grande */
+        height: auto; /* Mantém a proporção original do SVG */
+        top: 22.8rem;
+    }
+    
+    .svg-container {
+        position: absolute;
+        width: 70px;
+        height: 40px;
+        flex-shrink: 0;
+        top: 13rem;
+        left: 17rem;
+    }
+
+    .sobre{
+        font-size:28px;
+        top:50%;
+        left: 12%;
+    }
+
+    .apre{
+        font-size: 26px;
+        top:57%;
+        width: 600px;
+    }
+}
+
+@media (max-width: 1920px){
+    .txt2{
+        left: 24%;
+    }
+
+    .txt3{
+        position: absolute;
+        left: 24%;
+    }
+
+    .btn__icon {
+        font-size: 3rem;
+    }
+
+    .sobre{
+        top: 36rem;
+    }
+
+    .circle {
+        top: 36rem;
+    }
+
+    .apre{
+        top: 41rem;
+        left: 18rem;
+        font-size: 24px;
+        width: 720px;
+    }
+
+    .options {
+        font-size: 36px;
+        left: 69%;
+    }
+}
     </style>
 </head>
 
@@ -232,18 +339,19 @@
                 body.classList.add('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
-                svgPath.setAttribute('stroke', 'white');
+                svgPath.setAttribute('stroke', 'white'); // Cor do traço para o modo escuro
             } else {
                 body.classList.remove('dark-mode');
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
-                svgPath.setAttribute('stroke', 'black');
+                svgPath.setAttribute('stroke', 'black'); // Cor do traço para o modo claro
             }
         }
 
         // Adiciona um evento de clique para alternar o tema
         themeToggle.addEventListener('click', toggleTheme);
 
+        // Carrega o tema do localStorage, se disponível
         function loadTheme() {
             const savedTheme = localStorage.getItem();
             if (savedTheme === 'true') {
@@ -251,6 +359,7 @@
             }
         }
 
+        // Armazena o tema atual no localStorage
         function storeTheme() {
             localStorage.setItem();
         }

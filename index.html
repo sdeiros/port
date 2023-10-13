@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" type="text/css" href="./responsivo.css">
     <!-- ICONS CDN FONTAWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>DM - portifólio</title>
     <style>
@@ -60,7 +63,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            left: 24%;
+            left: 25%;
         }
 
         .txt3 {
@@ -71,7 +74,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            left: 24%;
+            left: 25%;
         }
 
         .svg-container {
@@ -97,7 +100,7 @@
             font-weight: 400;
             line-height: normal;
             left: 10.7%;
-            top: 58%;
+            top: 27rem;
         }
 
         .apre {
@@ -115,16 +118,71 @@
         }
 
         .btn__icon {
-    font-size: 2em; /* Tamanho em relação ao tamanho do texto */
-}
+            font-size: 2em;
+            /* Tamanho em relação ao tamanho do texto */
+        }
 
         #theme-toggle {
             position: absolute;
-            left: 90%;
-            cursor: pointer; /* Adicione este estilo para o cursor mudar ao passar o mouse */
+            left: 95%;
+            cursor: pointer;
+            /* Adicione este estilo para o cursor mudar ao passar o mouse */
         }
+
+        .options {
+            position: absolute;
+            display: flex;
+            /* Para alinhar os botões horizontalmente */
+            left: 71%;
+            /* Alinhar os botões à direita */
+            gap: 30px;
+            /* Adicionar espaçamento de 36px entre os botões */
+            top: 2.6rem;
+            font-family: Arapey;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .options a {
+            text-decoration: none;
+            /* Remover sublinhado dos links */
+            color: inherit;
+        }
+
+        /* Estilo da barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 12px; /* Largura da barra de rolagem */
+        }
+
+        /* Estilo do polegar (a parte que você arrasta) para o tema claro */
+        .light-theme ::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb-color-light);
+            border-radius: 6px; /* Borda arredondada do polegar */
+        }
+
+        /* Estilo do polegar (a parte que você arrasta) para o tema escuro */
+        .dark-theme ::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb-color-dark);
+            border-radius: 6px; /* Borda arredondada do polegar */
+        }
+
+        /* Estilo do polegar quando estiver sendo arrastado */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #888; /* Cor do polegar quando hover */
+        }
+
+        :root {
+    --scrollbar-thumb-color-light: #666; /* Cor do polegar no tema claro */
+    --scrollbar-thumb-color-dark: #333;  /* Cor do polegar no tema escuro */
+}
+
+
     </style>
 </head>
+
 <body>
     <nav>
         <div class="btn">
@@ -133,6 +191,12 @@
                     <i class="btn__icon fas fa-moon"></i>
                 </div>
             </div>
+        </div>
+
+        <div class="options">
+            <a href="#" class="eu">sobre mim</a>
+            <a href="#" class="trabalhos">trabalhos</a>
+            <a href="#" class="contato">contato</a>
         </div>
     </nav>
 
@@ -165,8 +229,11 @@
 
     <p class="sobre">sobre mim</p>
     <p class="apre">Meu nome é Davi Medeiros, tenho 17 anos e sou <strong>desenvolvedor front-end</strong>.<br>
-        Crio websites excepcionais que podem te ajudar a atingir o seu objetivo.
-        Estou constantemente aprimorando meu conhecimento em novas linguagens e ferramentas. Atualmente desenvolvo com <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> e <strong>Figma</strong> para aprimorar o design. Além disso, tenho experiência em <strong>suporte técnico</strong> e noções de <strong>Design.</strong>
+        Crio sites excepcionais que podem te ajudar a atingir o seu objetivo.
+        Estou constantemente aprimorando meu conhecimento em novas linguagens e ferramentas. Atualmente desenvolvo com
+        <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> e
+        <strong>Figma</strong> para aprimorar o design. Além disso, tenho experiência em <strong>suporte
+            técnico</strong> e noções de <strong>Design.</strong>
     </p>
 
     <script>
@@ -210,4 +277,5 @@
         }
     </script>
 </body>
+
 </html>

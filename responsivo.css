@@ -7,6 +7,7 @@
     }
 
     .txt2 {
+        position: absolute;
         font-size: 36px;
         /* Reduzindo o tamanho da fonte */
         top: 11rem;
@@ -20,6 +21,7 @@
     }
 
     .txt3 {
+        position: absolute;
         font-size: 36px;
         /* Reduzindo o tamanho da fonte */
         top: 13.6rem;
@@ -53,8 +55,43 @@
     }
 
     .apre{
-        font-size: 22px;
+        font-size: 26px;
         top:57%;
         width: 600px;
+    }
+}
+
+@media (max-width: 1920px){
+    .txt2{
+        left: 24%;
+    }
+
+    .txt3{
+        position: absolute;
+        left: 24%;
+    }
+
+    .btn__icon {
+        font-size: 3rem;
+    }
+
+    .sobre{
+        top: 36rem;
+    }
+
+    .circle {
+        top: 36rem;
+    }
+
+    .apre{
+        top: 41rem;
+        left: 18rem;
+        font-size: 24px;
+        width: 720px;
+    }
+
+    .options {
+        font-size: 36px;
+        left: 69%;
     }
 }

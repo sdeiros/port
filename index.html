@@ -170,104 +170,69 @@
         .dark-mode::-webkit-scrollbar-thumb {
             background-color: rgb(255, 255, 255);
         }
+        
+        @media (max-width: 720px){
+            .ola{
+              top: 4rem;
+              font-size: 64px;
+            }
+            
+            p{
+              top: 6rem;
+              font-size: 64px;
+            }
+            
+            .txt2{
+                top: 12.9rem;
+                left: 46%;
+            }
 
-        @media (max-width: 1600px) {
-    .ola {
-        font-size: 70px;
-        /* Reduzindo o tamanho da fonte */
-        top: 0rem;
-        /* Ajustando a posição superior */
-    }
+            .txt3{
+                position: absolute;
+                left: 46%;
+                top: 15.5rem;
+            }
 
-    .txt2 {
-        position: absolute;
-        font-size: 36px;
-        /* Reduzindo o tamanho da fonte */
-        top: 11rem;
-        /* Ajustando a posição superior */
-        left: 22rem;
-    }
+            .btn__icon {
+                font-size: 2.5rem;
+            }
 
-    p{
-        font-size: 70px;
-        top: 3rem;
-    }
+            .sobre{
+                top: 36rem;
+                left: 11rem;
+            }
 
-    .txt3 {
-        position: absolute;
-        font-size: 36px;
-        /* Reduzindo o tamanho da fonte */
-        top: 13.6rem;
-        /* Ajustando a posição superior */
-        left: 22rem;
-    }
+            .circle {
+                top: 36rem;
+            }
 
-    body {
-        padding: 20px;
-    }
+            .apre{
+                top: 40rem;
+                left: 17rem;
+                font-size: 24px;
+                width: 380px;
+            }
 
-    .circle {
-        width: 280px; /* Define uma largura máxima para evitar que o SVG fique muito grande */
-        height: auto; /* Mantém a proporção original do SVG */
-        top: 22.8rem;
-    }
-    
-    .svg-container {
-        position: absolute;
-        width: 70px;
-        height: 40px;
-        flex-shrink: 0;
-        top: 13rem;
-        left: 17rem;
-    }
+            .options {
+                font-size: 32px;
+                left: 30%;
+            }
+            
+            #theme-toggle {
+            position: absolute;
+            left: 90%;
+            cursor: pointer;
+            /* Adicione este estilo para o cursor mudar ao passar o mouse */
+        }
+        
+            .svg-container {
+            width: 75.5px;
+            height: 74px;
+            top: 15rem;
+            left: 34%;
+        }
+        }
 
-    .sobre{
-        font-size:28px;
-        top:50%;
-        left: 12%;
-    }
-
-    .apre{
-        font-size: 26px;
-        top:57%;
-        width: 600px;
-    }
-}
-
-@media (max-width: 1920px){
-    .txt2{
-        left: 24%;
-    }
-
-    .txt3{
-        position: absolute;
-        left: 24%;
-    }
-
-    .btn__icon {
-        font-size: 3rem;
-    }
-
-    .sobre{
-        top: 36rem;
-    }
-
-    .circle {
-        top: 36rem;
-    }
-
-    .apre{
-        top: 41rem;
-        left: 18rem;
-        font-size: 24px;
-        width: 720px;
-    }
-
-    .options {
-        font-size: 36px;
-        left: 69%;
-    }
-}
     </style>
 </head>
 

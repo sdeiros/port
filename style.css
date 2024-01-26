@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    transition: background-color 1s, color 1s;
+    padding: 40px;
+    margin: 0px;
+}
+
+p {
+    position: absolute;
+    font-family: Arapey;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 3rem;
+}
+
+.ola {
+    position: absolute;
+    font-family: Arapey;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 0rem;
+}
+
+.dark-mode {
+    background-color: #0C0C0C;
+    /* Cor do modo noturno */
+    color: #FDFFFF;
+}
+
+.light-mode {
+    background-color: #FFFDF5;
+    /* Cor do modo claro */
+    color: #000;
+    /* Cor do texto no modo claro */
+}
+
+.txt2 {
+    position: absolute;
+    top: 14rem;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    left: 25%;
+}
+
+.txt3 {
+    position: absolute;
+    top: 17rem;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    left: 25%;
+}
+
+.svg-container {
+    position: absolute;
+    width: 85.5px;
+    height: 84px;
+    flex-shrink: 0;
+    top: 16rem;
+    left: 19%;
+}
+
+.circle {
+    position: absolute;
+    left: 7rem;
+    top: 26rem;
+}
+
+.sobre {
+    position: absolute;
+    font-family: Arapey;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 10.7%;
+    top: 27rem;
+}
+
+.apre {
+    position: absolute;
+    width: 700px;
+    height: 258px;
+    flex-shrink: 0;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 16%;
+    top: 31rem;
+}
+
+.btn__icon {
+    font-size: 2em;
+}
+
+#theme-toggle {
+    position: absolute;
+    left: 96%;
+    cursor: pointer;
+}
+
+.options {
+    position: absolute;
+    display: flex;
+    left: 72%;
+    gap: 30px;
+    top: 2.6rem;
+    font-family: Arapey;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.options a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dark-mode::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 2rem;
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .sobre{
+        left: 6.2rem;
+        width: 50%;
+        font-size: 2.6rem;
+    }
+
+    .ola{
+        top: 4rem;
+        font-size: 4rem;
+    }
+
+    p{
+        top: 6rem;
+        font-size: 4rem;
+    }
+
+    .apre{
+        top: 33rem;
+        width: 60%;
+        left: 10rem;
+        font-size: 1.8rem;
+    }
+
+    #theme-toggle{
+        left: 92%;
+    }
+
+    .options{
+        left: 14rem;
+        font-size: 2rem;
+    }
+
+    .txt2{
+        left: 15.5rem;
+    }
+
+    .txt3{
+        left: 15.5rem;
+    }
+
+    .circle {
+        left: 2rem;
+    }
+}

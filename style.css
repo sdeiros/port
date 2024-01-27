@@ -3,103 +3,88 @@
 
 body {
     transition: background-color 1s, color 1s;
-    padding: 40px;
-    margin: 0px;
+    padding: 4%;
+    margin: 0;
 }
 
-p {
+p, .ola {
     position: absolute;
     font-family: Arapey;
-    font-size: 96px;
+    font-size: 4vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    top: 3rem;
 }
 
 .ola {
-    position: absolute;
-    font-family: Arapey;
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    top: 0rem;
+    top: 3.5rem;
+}
+
+.dark-mode, .light-mode {
+    color: #FDFFFF;
 }
 
 .dark-mode {
     background-color: #0C0C0C;
-    /* Cor do modo noturno */
-    color: #FDFFFF;
 }
 
 .light-mode {
     background-color: #FFFDF5;
-    /* Cor do modo claro */
-    color: #000;
-    /* Cor do texto no modo claro */
 }
 
-.txt2 {
+.txt2, .txt3 {
     position: absolute;
     top: 14rem;
     font-family: Inter;
-    font-size: 40px;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    left: 25%;
+    left: 28%;
 }
 
 .txt3 {
-    position: absolute;
-    top: 17rem;
-    font-family: Inter;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    left: 25%;
+    top: 15.8rem;
 }
 
 .svg-container {
     position: absolute;
-    width: 85.5px;
-    height: 84px;
+    width: 8vw;
+    height: 8vw;
     flex-shrink: 0;
-    top: 16rem;
+    top: 13rem;
     left: 19%;
 }
 
 .circle {
     position: absolute;
-    left: 7rem;
-    top: 26rem;
+    left: 2rem;
+    top: 24rem;
 }
 
 .sobre {
     position: absolute;
     font-family: Arapey;
-    font-size: 36px;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    left: 10.7%;
+    margin-left: -5%;
     top: 27rem;
 }
 
 .apre {
     position: absolute;
-    width: 700px;
-    height: 258px;
+    width: 60vw;
+    height: auto;
     flex-shrink: 0;
     font-family: Inter;
-    font-size: 22px;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    left: 16%;
-    top: 31rem;
+    margin-left: -10%;
+    top: 30rem;
 }
 
 .btn__icon {
@@ -116,10 +101,10 @@ p {
     position: absolute;
     display: flex;
     left: 72%;
-    gap: 30px;
+    gap: 2vw;
     top: 2.6rem;
     font-family: Arapey;
-    font-size: 26px;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -132,66 +117,66 @@ p {
 }
 
 .dark-mode::-webkit-scrollbar {
-    width: 12px;
-    background-color: rgb(0, 0, 0);
+    width: 1.2vw;
+    background-color: #000;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    background-color: rgb(255, 255, 255);
+    width: 1.2vw;
+    background-color: #FFF;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
     border-radius: 2rem;
 }
 
 .dark-mode::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFF;
 }
 
 @media (max-width: 768px) {
-    .sobre{
-        left: 6.2rem;
-        width: 50%;
-        font-size: 2.6rem;
+    .sobre {
+        left: 6.2%;
+        width: 80%;
+        font-size: 2.6vw;
     }
 
-    .ola{
+    .ola {
         top: 4rem;
-        font-size: 4rem;
+        font-size: 4vw;
     }
 
-    p{
+    p {
         top: 6rem;
-        font-size: 4rem;
+        font-size: 4vw;
     }
 
-    .apre{
+    .apre {
         top: 33rem;
-        width: 60%;
-        left: 10rem;
-        font-size: 1.8rem;
+        width: 80%;
+        left: 10%;
+        font-size: 1.8vw;
     }
 
-    #theme-toggle{
+    #theme-toggle {
         left: 92%;
     }
 
-    .options{
-        left: 14rem;
-        font-size: 2rem;
+    .options {
+        left: 14%;
+        font-size: 2vw;
     }
 
-    .txt2{
-        left: 15.5rem;
+    .txt2 {
+        left: 15.5%;
     }
 
-    .txt3{
-        left: 15.5rem;
+    .txt3 {
+        left: 15.5%;
     }
 
     .circle {
-        left: 2rem;
+        left: 2%;
     }
 }

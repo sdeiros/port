@@ -1,3 +1,20 @@
+.dark-mode::-webkit-scrollbar {
+    width: 1.2vw;
+    background-color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 1.2vw;
+    background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 2rem;
+}
+
+
+
 @media (max-width: 1600px) {
     .sobre{
         left: 13rem;

@@ -3,63 +3,89 @@
 
 body {
     transition: background-color 1s, color 1s;
-    padding: 4%;
     margin: 0;
 }
 
-p, .ola {
+h1, h2 {
     position: absolute;
     font-family: Arapey;
     font-size: 4vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-left: 2vw;
 }
 
-.ola {
-    top: 3.5rem;
+h1{
+    top: 1rem;
 }
 
-.dark-mode, .light-mode {
-    color: #FDFFFF;
+h2{
+    top: 3rem;
 }
 
-.dark-mode {
-    background-color: #0C0C0C;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
-.light-mode {
-    background-color: #FFFDF5;
+.btn {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    left: 94%;
+}
+
+.options {
+    position: absolute;
+    display: flex;
+    gap: 2vw;
+    font-family: Arapey;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    align-items: center;
+    margin-right: 2vw;
+    left: 68%;
+    top: 1.5rem;
 }
 
 .txt2, .txt3 {
     position: absolute;
-    top: 14rem;
+    top: 12rem;
     font-family: Inter;
     font-size: 2vw;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    left: 28%;
+    left: 25vw;
 }
 
 .txt3 {
-    top: 15.8rem;
+    top: 13.6rem;
 }
 
 .svg-container {
     position: absolute;
     width: 8vw;
-    height: 8vw;
+    height: auto;
     flex-shrink: 0;
-    top: 13rem;
-    left: 19%;
+    top: 10rem;
+    left: 18.5vw;
 }
 
 .circle {
     position: absolute;
+    width: 24vw;
+    height: auto;
     left: 2rem;
-    top: 24rem;
+    top: 18.5rem;
 }
 
 .sobre {
@@ -69,8 +95,8 @@ p, .ola {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: -5%;
-    top: 27rem;
+    margin-left: 9vw;
+    top: 20rem;
 }
 
 .apre {
@@ -83,32 +109,13 @@ p, .ola {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: -10%;
-    top: 30rem;
+    margin-left: 9vw;
+    top: 24rem;
 }
 
-.btn__icon {
-    font-size: 2em;
-}
-
-#theme-toggle {
-    position: absolute;
-    left: 96%;
+.btn__indicator {
     cursor: pointer;
-}
-
-.options {
-    position: absolute;
-    display: flex;
-    left: 72%;
-    gap: 2vw;
-    top: 2.6rem;
-    font-family: Arapey;
-    font-size: 2vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
+    font-size: 3vw;
 }
 
 .options a {
@@ -116,67 +123,137 @@ p, .ola {
     color: inherit;
 }
 
-.dark-mode::-webkit-scrollbar {
-    width: 1.2vw;
-    background-color: #000;
+@media screen and (max-width: 768px) {
+    h1, h2 {
+        margin-left: 8vw;
+        font-size: 6vw;
+    }
+
+    h1{
+        top: 2rem;
+    }
+    
+    h2{
+        top: 4rem;
+    }
+
+    .options {
+        font-size: 4vw;
+    }
+
+    .txt2, .txt3 {
+        font-size: 4vw;
+    }
+
+    .txt2 {
+        top: 9rem;
+    }
+
+    .txt3 {
+        top: 11rem;
+    }
+
+    .sobre {
+        font-size: 4vw;
+        margin-left: 14vw;
+    }
+
+    .apre {
+        font-size: 3vw;
+        margin-left: 18vw;
+    }
+
+    .btn__indicator {
+        font-size: 6vw;
+    }
+
+    .circle {
+        width: 38vw;
+        height: auto;
+    }
+
+    .svg-container {
+        width: 10vw;
+        height: auto;
+        top: 10rem;
+        left: 22vw;
+    }
 }
 
-::-webkit-scrollbar {
-    width: 1.2vw;
-    background-color: #FFF;
+@media screen and (max-width: 720px) {
+    h1, h2 {
+        margin-left: 6vw;
+        font-size: 8vw;
+    }
+
+    h1{
+        top: 4rem;
+    }
+    
+    h2{
+        top: 7rem;
+    }
+
+    .options {
+        font-size: 6vw;
+    }
+
+    .txt2, .txt3 {
+        font-size: 6vw;
+    }
+
+    .txt2 {
+        top: 12rem;
+    }
+
+    .txt3 {
+        top: 15rem;
+    }
+
+    .sobre {
+        font-size: 6vw;
+        margin-left: 18vw;
+        top: 28rem;
+    }
+
+    .apre {
+        font-size: 5vw;
+        margin-left: 18vw;
+        width: 66vw;
+        top: 32rem;
+    }
+
+    .btn__indicator {
+        font-size: 8vw;
+    }
+
+    .circle {
+        width: 64vw;
+        height: auto;
+        top: 26rem;
+    }
+
+    .svg-container {
+        width: 12vw;
+        height: auto;
+        top: 14rem;
+        left: 18vw;
+    }
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #000;
-    border-radius: 2rem;
-}
 
 .dark-mode::-webkit-scrollbar-thumb {
     background-color: #FFF;
 }
 
-@media (max-width: 768px) {
-    .sobre {
-        left: 6.2%;
-        width: 80%;
-        font-size: 2.6vw;
-    }
+.dark-mode, .light-mode {
+    color: #FDFFFF;
+}
 
-    .ola {
-        top: 4rem;
-        font-size: 4vw;
-    }
+.dark-mode {
+    background-color: #0C0C0C;
+}
 
-    p {
-        top: 6rem;
-        font-size: 4vw;
-    }
-
-    .apre {
-        top: 33rem;
-        width: 80%;
-        left: 10%;
-        font-size: 1.8vw;
-    }
-
-    #theme-toggle {
-        left: 92%;
-    }
-
-    .options {
-        left: 14%;
-        font-size: 2vw;
-    }
-
-    .txt2 {
-        left: 15.5%;
-    }
-
-    .txt3 {
-        left: 15.5%;
-    }
-
-    .circle {
-        left: 2%;
-    }
+.light-mode {
+    background-color: #FFFDF5;
 }

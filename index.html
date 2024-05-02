@@ -2,113 +2,1009 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="/responsivo.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- ICONS CDN FONTAWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
 
-    <title>DM - portifólio</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <meta name="description" content="Projeto Apocalipse">
+  <meta name="author" content="Humanos">
+  <meta name="keywords" content="Projeto Apocalipse" />
+
+  <link rel="alternate" href="" hreflang="pt-br" />
+  <meta name="robots" content="index, follow">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:url" content="https://sdeiros.github.io/apocalipse/" />
+  <meta property="og:title" content="Projeto Apocalipse" />
+  <meta property="og:image" content="https://i.imgur.com/tMFrxGB.png" />
+  <meta property="og:description" content="Salve-se quem puder" />
+  <meta name="theme-color" content="#630b02">
+
+  <meta property="business:contact_data:country_name" content="Brasil" />
+  <meta property="business:contact_data:website" content="https://sdeiros.github.io/apocalipse/" />
+  <meta property="business:contact_data:region" content="RJ" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="Salve-se quem puder" />
+  <meta name="twitter:title" content="Projeto Apocalipse" />
+  <meta name="twitter:image" content="https://i.imgur.com/tMFrxGB.png" />
+
+
+  <meta name="geo.placename" content="LOCALIZAÇÃO" />
+  <meta name="geo.region" content="BR" />
+  <meta name="description" content="Salve-se quem puder" />
+  <link rel="canonical" href="https://sdeiros.github.io/apocalipse/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Projeto Apocalipse</title>
+  <style>
+    body {
+      text-align: center;
+      color: #dddddd;
+      background-color: #400000;
+    }
+
+    #countdown {
+      position: relative;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #15ff00;
+      font-family: 'DS-Digital', sans-serif;
+      top: 20vh;
+    }
+
+    P {
+      position: relative;
+      font-family: "Merriweather", serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      top: 23vh;
+    }
+
+    h4 {
+      font-family: "Merriweather", serif;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-top: 4vh;
+    }
+
+    h3 {
+      position: relative;
+      font-family: "Merriweather", serif;
+      font-weight: 400;
+      font-size: 3rem;
+      top: -3.2rem;
+    }
+
+    .foto {
+      width: 30rem;
+      height: auto;
+      margin-top: -12rem;
+    }
+
+    @media (max-width: 1730px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 10vh;
+      }
+
+      .foto {
+        width: 28rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.4rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 12vh;
+      }
+    }
+
+    @media (max-width: 1645px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 24rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 11vh;
+      }
+    }
+
+    @media (max-width: 1580px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 24rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.8rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 3vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 11vh;
+      }
+    }
+
+    @media (max-width: 1559px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 13vh;
+      }
+
+      .foto {
+        width: 24rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 2vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 16vh;
+      }
+    }
+
+    @media (max-width: 1559px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 13vh;
+      }
+
+      .foto {
+        width: 24rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 2vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 16vh;
+      }
+    }
+
+    @media (max-width: 1540px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: -16vh;
+      }
+
+      .foto {
+        width: 18rem;
+        margin-top: -6rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.8rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: -14vh;
+      }
+    }
+
+    @media (max-width: 1530px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 6vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.6rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 9vh;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 2vh;
+      }
+
+      .foto {
+        width: 20rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.6rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 6vh;
+      }
+    }
+
+    @media (max-width: 1150px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 20rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 12vh;
+      }
+    }
+
+    @media (max-width: 1120px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: -6vh;
+      }
+
+      .foto {
+        width: 15.8rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.6rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 2vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: -1vh;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 20rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1.2rem;
+        top: 11vh;
+      }
+    }
+
+    @media (max-width: 1025px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: -9vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -4rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.8rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: -7.5vh;
+      }
+    }
+
+    @media (max-width: 9990px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 11vh;
+      }
+    }
+
+    @media (max-width: 820px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 6vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 8vh;
+      }
+    }
+
+    @media (max-width: 770px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 10vh;
+      }
+    }
+
+    @media (max-width: 690px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: -12vh;
+      }
+
+      .foto {
+        width: 21rem;
+        margin-top: -4rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.8rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 2vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: -10vh;
+      }
+    }
+
+    @media (max-width: 680px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 12vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 3vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 15vh;
+      }
+    }
+
+    @media (max-width: 575px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 6vh;
+      }
+
+      .foto {
+        width: 21rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 2vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 9vh;
+      }
+    }
+
+    @media (max-width: 550px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 12vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -11rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 2vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 14vh;
+      }
+    }
+
+    @media (max-width: 542px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 21rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 2vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 1vh;
+      }
+    }
+
+    @media (max-width: 530px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 24rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 11vh;
+      }
+    }
+
+    @media (max-width: 510px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 12vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 14vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 24rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 3vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 10vh;
+      }
+    }
+
+    @media (max-width: 468px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 2vh;
+      }
+
+      .foto {
+        width: 20rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 6vh;
+      }
+    }
+
+    @media (max-width: 432px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 9vh;
+      }
+
+      .foto {
+        width: 22rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 12vh;
+      }
+    }
+
+    @media (max-width: 400px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 20rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 12vh;
+      }
+    }
+
+    @media (max-width: 390px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 8vh;
+      }
+
+      .foto {
+        width: 20rem;
+        margin-top: -9rem;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+        top: -3rem;
+      }
+
+      h4 {
+        font-size: 1.6rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 12vh;
+      }
+    }
+
+    @media (max-width: 379px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 4vh;
+      }
+
+      .foto {
+        width: 18rem;
+        margin-top: -10rem;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+        top: -2.8rem;
+      }
+
+      h4 {
+        font-size: 1.6rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 8vh;
+      }
+    }
+
+    @media (max-width: 375px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 3.5vh;
+      }
+
+      .foto {
+        width: 16rem;
+        margin-top: -9.5rem;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+        top: -2.8rem;
+      }
+
+      h4 {
+        font-size: 1.6rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 7vh;
+      }
+    }
+
+    @media (max-width: 360px) {
+      #countdown {
+        font-size: 2.6rem;
+        top: 6vh;
+      }
+
+      .foto {
+        width: 18rem;
+        margin-top: -10.6rem;
+      }
+
+      h3 {
+        font-size: 2.8rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 1rem;
+        top: 9vh;
+      }
+    }
+
+    @media (max-width: 330px) {
+      #countdown {
+        font-size: 2rem;
+        top: -20vh;
+      }
+
+      .foto {
+        width: 12rem;
+        margin-top: -6rem;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+        top: -3.2rem;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        margin-top: 4vh;
+      }
+
+      P {
+        font-size: 0.8rem;
+        top: -17vh;
+      }
+    }
+
+    ::selection {
+      background-color: #810000;
+      color: #ffffff;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="btn">
-        <div class="btn__indicator">
-            <div class="btn__icon-container" id="theme-toggle">
-                <i class="btn__icon fas fa-moon"></i>
-            </div>
-        </div>
-    </div>
+  <h4>PROJETO</h4>
+  <h3>APOCALIPSE</h3>
 
-    <nav>
-        <div class="options">
-            <a href="#">sobre mim</a>
-            <a href="#">trabalhos</a>
-            <a href="#">contato</a>
-        </div>
-    </nav>
+  <p>TEMPO RESTANTE</p>
+  <div id="countdown"></div>
 
-    <h1>OLÁ</h1><br>
-    <h2>EU SOU O DAVI</h2>
+  <div>
+    <img class="foto" id="randomImage" src="">
+  </div>
 
-    <div class="svg-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 86" fill="none">
-            <path id="svg-path"
-                d="M85.5 1H70.5C69.9477 1 69.5 1.44771 69.5 2V53.5858C69.5 54.4767 68.4229 54.9229 67.7929 54.2929L15.2071 1.70711C14.8166 1.31658 14.1834 1.31658 13.7929 1.70711L3.70711 11.7929C3.31658 12.1834 3.31658 12.8166 3.70711 13.2071L55.7929 65.2929C56.4229 65.9229 55.9767 67 55.0858 67H2C1.44772 67 1 67.4477 1 68V84C1 84.5523 1.44772 85 2 85H85.5C86.0523 85 86.5 84.5523 86.5 84V2C86.5 1.44772 86.0523 1 85.5 1Z"
-                stroke="black" stroke-width="3" />
-        </svg>
-    </div>
+  <script>
+    function countdown() {
+      const targetDate = new Date('2024-07-06T16:00:00');
+      const now = new Date().getTime();
+      const timeRemaining = targetDate - now;
 
-    <h1 class="txt2">desenvolvedor</h1>
-    <h1 class="txt3" lang="en">front-end/web</h1>
+      if (timeRemaining <= 0) {
+        document.getElementById('countdown').innerHTML = 'O apocalipse já começou. Vá para este ponto de segurança!';
+      } else {
+        let hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+        let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-    <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 345" fill="none">
-        <path
-            d="M348.5 197.748C348.5 45.5 235.768 1.24766 178.268 1.24766C130.268 -2.25232 -10.6217 29.7815 1.76822 197.748C16.7621 401.016 348.5 384.144 348.5 197.748Z"
-            stroke="url(#paint0_linear_128_50)" stroke-width="2" />
-        <defs>
-            <linearGradient id="paint0_linear_128_50" x1="76" y1="36" x2="262" y2="220" gradientUnits="userSpaceOnUse">
-                <stop stop-color="white" />
-                <stop offset="0.4375" stop-color="#56C2FF" />
-                <stop offset="0.890625" stop-color="#0C0C0C" stop-opacity="0" />
-            </linearGradient>
-        </defs>
-    </svg>
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    <h1 class="sobre">sobre mim</h1>
-    <p class="apre">Meu nome é Davi Medeiros, tenho 18 anos e sou <strong>desenvolvedor front-end</strong>.<br>
-        Crio sites excepcionais que podem te ajudar a atingir o seu objetivo.
-        Estou constantemente aprimorando meu conhecimento em novas linguagens e ferramentas. Atualmente desenvolvo com
-        <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> e
-        <strong>Figma</strong> para aprimorar o design. Além disso, tenho experiência em <strong>suporte
-            técnico</strong> e noções de <strong>Design.</strong>
-    </p>
+        document.getElementById('countdown').innerHTML = `${hours}:${minutes}:${seconds}`;
+      }
+    }
 
-    <script>
-        const body = document.body;
-        const themeToggle = document.getElementById('theme-toggle');
-        const icon = themeToggle.querySelector('.btn__icon');
-        const svgPath = document.getElementById('svg-path');
-        let isDarkMode = false;
+    setInterval(countdown, 1000);
 
-        // Função para alternar o modo claro/escuro e o ícone
-        function toggleTheme() {
-            isDarkMode = !isDarkMode;
+    countdown();
 
-            if (isDarkMode) {
-                body.classList.add('dark-mode');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-                svgPath.setAttribute('stroke', 'white'); // Cor do traço para o modo escuro
-            } else {
-                body.classList.remove('dark-mode');
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-                svgPath.setAttribute('stroke', 'black'); // Cor do traço para o modo claro
-            }
-        }
+    function getRandomImage() {
+      const imageFolder = 'img/';
+      const images = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg']; // Lista das imagens na pasta
 
-        // Adiciona um evento de clique para alternar o tema
-        themeToggle.addEventListener('click', toggleTheme);
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const randomImage = images[randomIndex];
+      const imagePath = `${imageFolder}/${randomImage}`;
 
-        // Carrega o tema do localStorage, se disponível
-        function loadTheme() {
-            const savedTheme = localStorage.getItem();
-            if (savedTheme === 'true') {
-                toggleTheme();
-            }
-        }
+      document.getElementById('randomImage').src = imagePath;
+    }
 
-        // Armazena o tema atual no localStorage
-        function storeTheme() {
-            localStorage.setItem();
-        }
-    </script>
+    setInterval(countdown, 1000);
+    getRandomImage();
+  </script>
+
+  <!-- <p>ponto de segurança</p> -->
+
+  <script type="text/javascript">
+    var sc_project = 12994327;
+    var sc_invisible = 0;
+    var sc_security = "711971c1";
+    var scJsHost = "https://";
+    document.write("<sc" + "ript type='text/javascript' src='" +
+      scJsHost +
+      "statcounter.com/counter/counter.js'></" + "script>");
+  </script>
+  <noscript>
+    <div class="statcounter"><a title="free hit
+  counter" href="" target=""><img class="statcounter" src="" alt="free hit counter" referrerPolicy=""></a></div>
+  </noscript>
 </body>
 
 </html>
